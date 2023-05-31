@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+h2{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}

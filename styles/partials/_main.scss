@@ -1,0 +1,17 @@
+.main h2 {
+    margin: 1rem;
+}
+
+.main {
+    &__section {
+      height: 35vh;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+
+      &-image {
+        height: 35vh;
+        width: 90%;
+    }
+  }
+}
