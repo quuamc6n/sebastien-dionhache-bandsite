@@ -1,12 +1,20 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  margin: 1rem;
+}
+
+p{
+    margin: 0.5rem;
 }
 
 html,
 body,
 ul,
 h2{
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }

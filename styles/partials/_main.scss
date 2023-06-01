@@ -1,17 +1,32 @@
 .main h2 {
-    margin: 1rem;
+  margin: 1rem;
 }
 
 .main {
-    &__section {
-      height: 35vh;
-      width: 90%;
-      display: flex;
-      justify-content: center;
+  &__section {
+    &-image {
+      height: 30vh;
+      width: 100%;
+    }
+    &-p {
+      font-family: "avenir";
+      font-style: normal;
+      font-weight: bold;
+      line-height: 1.375rem;
+      font-size: 0.875rem;
+    }
 
-      &-image {
-        height: 35vh;
-        width: 90%;
+    &-title {
+      font-family: "avenir";
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+    &-origin {
+      font-family: "avenir";
+      font-style: normal;
+      font-weight: 400;
+      margin-top: 1rem;
     }
   }
 }

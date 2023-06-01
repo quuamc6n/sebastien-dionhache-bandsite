@@ -1,0 +1,18 @@
+.gallery{
+    background-color: #FAFAFA;
+
+    &__h2{
+        padding-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__div{
+        margin: 0 1rem;
+        &-image{
+            height: 35vh;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+    }
+}
