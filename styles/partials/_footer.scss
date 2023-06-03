@@ -2,11 +2,17 @@
     background-color: #323232;
     color: white;
 
+    &__title{
+        margin: 1rem 0;
+        padding-top: 1rem;
+    }
+
     &__div{
-        margin: 1rem 1rem 0 1rem;
+        margin: 1rem 0 0 1rem;
+        padding-bottom: 1rem;
 
         &-management{
-            margin: 1rem -0.5rem;
+            margin: 1rem 0;
             font-family: "avenir";
             font-style: normal;
             font-weight: bold;
@@ -14,6 +20,16 @@
             &-email{
                 margin: 2rem 0;
             }
-        }  
+            &-p{
+                margin: 0;
+            }
+        }
     }
+    &__socials-image{
+        padding-right: 1.5rem;
+    }
+}
+
+.copyright__fineprint{
+    margin: 0;
 }
