@@ -30,6 +30,9 @@
         align-items: center;
         margin: 32px 0 16px 28px;
     }
+    @include desktop{
+        padding-left: 36px;
+    }
 
     &-tablet{
         @include tablet{
@@ -79,6 +82,10 @@
       bottom: 385px; left: 590px;
       width: 32px;
   }
+  @include desktop{
+      position: relative;
+      bottom: 385px; left: 1068px
+  }
 
   &__fineprint {
     margin: 16px 0 0 0;
@@ -86,6 +93,9 @@
     @include tablet{
         margin: -90px 0 0 28px;
         padding-bottom: 48px;
+    }
+    @include desktop{
+        padding-left: 36px;
     }
   }
 }
@@ -96,5 +106,7 @@
         justify-content: space-evenly;
         font-size: 0.9rem;
     }
-    
+    @include desktop{
+        padding-right: 350px;
+    }
 }
