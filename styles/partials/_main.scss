@@ -1,11 +1,13 @@
 @use "./breakpoints" as *;
+@use "./variables.scss" as *;
 
 .main h2 {
   margin-bottom: 0.5rem;
-  @include tablet{
+  @include demi-font;
+  @include tablet {
     margin-bottom: 1rem;
   }
-  @include desktop{
+  @include desktop {
     padding-left: 2.25rem;
   }
 }
@@ -15,41 +17,36 @@
     justify-content: center;
     display: flex;
 
-    &-div{
-      margin: 0 3.125rem;
-    }
-
     &-image {
       height: 30vh;
       width: 100%;
-      @include tablet{
+      @include tablet {
         width: 90%;
         height: 40vh;
       }
-      @include desktop{
+      @include desktop {
         width: 85%;
         height: 60vh;
       }
     }
     &-p {
-      font-family: "avenir";
-      font-style: normal;
-      font-weight: 500;
+      @include demi-font;
       line-height: 1.375rem;
       font-size: 0.875rem;
       text-align: left;
       margin-bottom: 0;
-      @include tablet{
+      @include tablet {
         font-size: 1.25rem;
         margin: 1.5rem 1rem 1rem 2rem;
       }
-      @include desktop{
+      @include desktop {
         margin: 1rem 2rem;
         width: 60%;
       }
-      &-signature{
+      &-signature {
         margin: 0.5rem 0 2rem 0;
-        @include tablet{
+        @include demi-font;
+        @include tablet {
           margin: 0 0 1rem 2rem;
         }
       }
@@ -60,7 +57,7 @@
       font-style: normal;
       font-weight: 500;
       margin-top: 1rem;
-      @include tablet{
+      @include tablet {
         font-size: 1.25rem;
         font-weight: bold;
         margin-left: 2rem;
@@ -68,23 +65,24 @@
       }
     }
     &-origin {
-      @include tablet{
+      @include tablet {
         display: flex;
         justify-content: space-around;
         margin: 0 2rem;
         text-align: left;
-        }
+      }
 
-      &-p{
-        font-family: "avenir";
-        font-style: normal;
-        font-weight: 400;
+      &-p {
+        @include regular-font;
+        line-height: 1.5rem;
         margin-top: 1rem;
-        @include tablet{
+        @include tablet {
           margin: 0;
         }
-        &-right{
-          margin-left: 1.25rem;
+        &-right {
+          @include tablet {
+            margin-left: 1.25rem;
+          }
         }
       }
     }

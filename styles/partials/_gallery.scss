@@ -1,27 +1,29 @@
 @use "./breakpoints" as *;
+@use "./variables.scss" as *;
 
 .gallery{
     background-color: #FAFAFA;
 
     &__h2{
-        padding-top: 16px;
-        margin-left: 16px;
+        @include demi-font;
+        padding-top: 1rem;
+        margin-left: 1rem;
         @include tablet{
-            margin-left: 28px;
-            padding: 40px 0 16px 0;
+            margin-left: 1.75rem;
+            padding: 2.5rem 0 1rem 0;
             font-size: 2rem;
         }
         @include desktop{
-            margin-left: 75px;
+            margin-left: 4.69rem;
         }
     }
 
     &__div{
-        margin: 0 16px;
+        margin: 0 1rem;
         @include tablet{
             display: flex;
             flex-wrap: wrap;
-            margin: 0 16px;
+            margin: 0 1rem;
         }
         @include desktop{
             margin: 1rem 3rem;
@@ -31,11 +33,11 @@
         &-image{
             height: 25vh;
             width: 100%;
-            margin-top: 16px;
+            margin-top: 1rem;
             @include tablet{
                 height: 15vh;
                 width: 30%;
-                margin: 12px;
+                margin: 0.75rem;
                 justify-content: space-evenly;
             }
         }

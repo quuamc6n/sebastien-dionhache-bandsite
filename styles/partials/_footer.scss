@@ -1,9 +1,11 @@
 @use "./breakpoints" as *;
+@use "./variables.scss" as *;
 
 .footer {
   background-color: #323232;
   color: white;
   padding-left: 1rem;
+  @include regular-font;
 
   &__socials{
       @include tablet{
@@ -44,9 +46,7 @@
 
     &-management {
       margin: 1rem 0;
-      font-family: "avenir";
-      font-style: normal;
-      font-weight: bold;
+      @include demi-font;
 
       &-email {
         margin: 1rem 0 2rem 0;
@@ -54,33 +54,25 @@
 
       &-p {
         margin: 0;
-
-        &--normal {
-          font-family: "regular__avenir";
-          font-style: normal;
-          font-weight: 400;
-        }
       }
     }
   }
 
   &__socials {
     &-image {
-      padding-right: 24px;
+      padding-right: 1.5rem;
     }
   }
 }
 .copyright {
-  margin-top: 80px;
-  font-family: "bold_avenir";
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 100;
+  margin-top: 5rem;
   line-height: 2rem;
-  font-size: 24px;
+  font-size: 1.5rem;
   @include tablet{
       position: relative;
-      bottom: 385px; left: 590px;
-      width: 32px;
+      bottom: 24rem; left: 36.87rem;
+      width: 2rem;
   }
   @include desktop{
       position: relative;
@@ -89,7 +81,7 @@
 
   &__fineprint {
     margin: 1rem 0 0 0;
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
     @include tablet{
         margin: -5.625rem 0 0 1.75rem;
         padding-bottom: 3rem;
