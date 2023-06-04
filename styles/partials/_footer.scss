@@ -3,6 +3,7 @@
 .footer {
   background-color: #323232;
   color: white;
+  padding-left: 16px;
 
   &__socials{
       @include tablet{
@@ -21,7 +22,7 @@
   }
 
   &__div {
-    margin: 16px 0 0 16px;
+    margin: 16px 0 0 0;
     padding-bottom: 1rem;
     @include tablet{
         padding-top: 32px;
@@ -81,6 +82,7 @@
 
   &__fineprint {
     margin: 16px 0 0 0;
+    padding-bottom: 24px;
     @include tablet{
         margin: -90px 0 0 28px;
         padding-bottom: 48px;

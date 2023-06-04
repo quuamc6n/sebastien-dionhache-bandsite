@@ -27,12 +27,16 @@
       line-height: 22px;
       font-size: 14px;
       text-align: left;
+      margin-bottom: 0;
       @include tablet{
         font-size: 20px;
         margin: 32px 75px 16px 70px;
       }
       &-signature{
-        margin: 0 0 16px 64px;
+        margin: 8px 0 32px 0;
+        @include tablet{
+          margin: 0 0 16px 64px;
+        }
       }
     }
 
