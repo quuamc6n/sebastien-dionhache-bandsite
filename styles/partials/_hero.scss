@@ -17,6 +17,9 @@
             font-size: 60px;
             margin-left: 32px;
         }
+        @include desktop{
+            padding-left: 36px;
+        }
     }
 
     &__image{
@@ -25,6 +28,9 @@
         opacity: 0.5;
         @include tablet{
             height: 70vh;
+        }
+        @include desktop{
+            height: 80vh;
         }
     }
 }

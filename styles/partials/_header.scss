@@ -14,6 +14,9 @@
         align-items: center;
         height: 15vh;
     }
+    @include desktop{
+        padding-left: 36px;
+    }
 
     &__list{
         display: flex;

@@ -9,6 +9,9 @@
   @include tablet{
       margin: 2.25rem;
   }
+  @include desktop{
+      margin: 2.25rem;
+  }
 }
 
 html,
