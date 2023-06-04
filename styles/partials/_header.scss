@@ -1,3 +1,5 @@
+@use "./breakpoints" as *;
+
 .nav {
     display: flex;
     flex-direction: column;
@@ -6,12 +8,24 @@
     height: 20vh;
     background-color: #323232;
     color: white;
+    @include tablet{
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        height: 15vh;
+    }
 
     &__list{
         display: flex;
         justify-content: space-around;
         list-style-type: none;
         text-decoration: none;
+        
+        &-item{
+            @include tablet{
+            margin-left: 48px;
+            }
+        }
     }
 
     &__item{
@@ -20,12 +34,16 @@
         font-family: "bold_avenir";
         font-style: normal;
         font-weight: bold;
-        line-height: 2rem;
-        font-size: 1.5rem;
+        line-height: 32px;
+        font-size: 24px;
         
         &-link{
             text-decoration: none;
             color: white;
+            @include tablet{
+                margin-left: 32px;
+                font-size: 24px;
+            }
          }
     }
 }

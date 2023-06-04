@@ -1,51 +1,98 @@
-.footer{
-    background-color: #323232;
-    color: white;
+@use "./breakpoints" as *;
 
-    &__title{
-        margin: 1rem 0;
-        padding-top: 1rem;
+.footer {
+  background-color: #323232;
+  color: white;
+
+  &__socials{
+      @include tablet{
+          margin-left: 16px;
+      }
+  }
+
+  &__title {
+    margin: 16px 0;
+    padding-top: 16px;
+    @include tablet{
+        margin: 16px 16px 16px 0;
+        padding-top: 0;
+        font-size: 2.5rem;
+    }
+  }
+
+  &__div {
+    margin: 16px 0 0 16px;
+    padding-bottom: 1rem;
+    @include tablet{
+        padding-top: 32px;
+        display: flex;
+        align-items: center;
+        margin: 32px 0 16px 28px;
     }
 
-    &__div{
-        margin: 1rem 0 0 1rem;
-        padding-bottom: 1rem;
-
-        &-management{
-            margin: 1rem 0;
-            font-family: "avenir";
-            font-style: normal;
-            font-weight: bold;
-
-            &-email{
-                margin: 2rem 0;
-            }
-            
-            &-p{
-                margin: 0;
-
-                &--normal{
-                    font-family: "regular__avenir";
-                    font-style: normal;
-                    font-weight: 400;
-                }
-            }
+    &-tablet{
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            margin-right: 28px;
         }
     }
-    &__socials-image{
-        padding-right: 1.5rem;
+
+    &-management {
+      margin: 16px 0;
+      font-family: "avenir";
+      font-style: normal;
+      font-weight: bold;
+
+      &-email {
+        margin: 32px 0;
+      }
+
+      &-p {
+        margin: 0;
+
+        &--normal {
+          font-family: "regular__avenir";
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
     }
+  }
+
+  &__socials {
+    &-image {
+      padding-right: 24px;
+    }
+  }
+}
+.copyright {
+  margin-top: 80px;
+  font-family: "bold_avenir";
+  font-style: normal;
+  font-weight: bold;
+  line-height: 32px;
+  font-size: 24px;
+  @include tablet{
+      position: relative;
+      bottom: 385px; left: 620px;
+      width: 32px;
+  }
+
+  &__fineprint {
+    margin: 16px 0 0 0;
+    @include tablet{
+        margin: -90px 0 0 28px;
+        padding-bottom: 48px;
+    }
+  }
 }
 
-.copyright{
-    margin-top: 5rem;
-    font-family: "bold_avenir";
-    font-style: normal;
-    font-weight: bold;
-    line-height: 2rem;
-    font-size: 1.5rem;
-
-    &__fineprint{
-        margin: 1rem 0;
+.footer__section{
+    @include tablet{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 0.9rem;
     }
+    
 }

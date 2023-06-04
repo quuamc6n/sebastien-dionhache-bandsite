@@ -1,9 +1,14 @@
+@use "./breakpoints" as *;
+
 * {
   box-sizing: border-box;
 }
 
 .main {
   margin: 1rem;
+  @include tablet{
+      margin: 2.25rem;
+  }
 }
 
 html,

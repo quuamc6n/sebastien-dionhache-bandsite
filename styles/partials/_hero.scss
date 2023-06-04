@@ -1,22 +1,30 @@
+@use "./breakpoints" as *;
+
 .hero {
     display: flex;
     align-items: center;
-    // color: white;
     background-color: #323232;
 
     & h1{
         position: absolute;
         z-index: 1;
-        margin-left: 1rem;
+        margin-left: 16px;
         font-family: "regular__avenir";
         font-style: normal;
-        font-weight: bolder;
+        font-weight: bold;
         color: white;
+        @include tablet{
+            font-size: 60px;
+            margin-left: 32px;
+        }
     }
 
     &__image{
         height: 35vh;
         width: 100%;
         opacity: 0.5;
+        @include tablet{
+            height: 70vh;
+        }
     }
 }

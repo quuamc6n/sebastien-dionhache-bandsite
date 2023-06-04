@@ -1,18 +1,35 @@
+@use "./breakpoints" as *;
+
 .gallery{
     background-color: #FAFAFA;
 
     &__h2{
-        padding-top: 1rem;
-        margin-left: 1rem;
+        padding-top: 16px;
+        margin-left: 16px;
+        @include tablet{
+            margin-left: 28px;
+            padding: 40px 0 16px 0;
+            font-size: 2rem;
+        }
     }
 
     &__div{
-        margin: 0 1rem;
+        margin: 0 16px;
+        @include tablet{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 16px;
+        }
         &-image{
             height: 35vh;
             width: 100%;
-            margin-top: 1rem;
+            margin-top: 16px;
+            @include tablet{
+                height: 25vh;
+                width: 30%;
+                margin: 12px;
+                justify-content: space-evenly;
+            }
         }
-
     }
 }
