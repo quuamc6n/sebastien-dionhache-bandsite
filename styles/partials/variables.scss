@@ -1,0 +1,17 @@
+@mixin regular-font {
+  font-family: "regular__avenir";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin bold-font {
+  font-family: "bold__avenir";
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin demi-font {
+  font-family: "demi__avenir";
+  font-style: normal;
+  font-weight: 600;
+}

@@ -3,53 +3,53 @@
 .footer {
   background-color: #323232;
   color: white;
-  padding-left: 16px;
+  padding-left: 1rem;
 
   &__socials{
       @include tablet{
-          margin-left: 16px;
+          margin-left: 1rem;
       }
   }
 
   &__title {
-    margin: 16px 0;
-    padding-top: 16px;
+    margin: 1rem 0;
+    padding-top: 1rem;
     @include tablet{
-        margin: 16px 16px 16px 0;
+        margin: 1rem 1rem 1rem 0;
         padding-top: 0;
         font-size: 2.5rem;
     }
   }
 
   &__div {
-    margin: 16px 0 0 0;
+    margin: 1rem 0 0 0;
     padding-bottom: 1rem;
     @include tablet{
-        padding-top: 32px;
+        padding-top: 2rem;
         display: flex;
         align-items: center;
-        margin: 32px 0 16px 28px;
+        margin: 2rem 0 1rem 1.75rem;
     }
     @include desktop{
-        padding-left: 36px;
+        padding-left: 2.25rem;
     }
 
     &-tablet{
         @include tablet{
             display: flex;
             flex-direction: column;
-            margin-right: 28px;
+            margin-right: 1.75rem;
         }
     }
 
     &-management {
-      margin: 16px 0;
+      margin: 1rem 0;
       font-family: "avenir";
       font-style: normal;
       font-weight: bold;
 
       &-email {
-        margin: 16px 0 32px 0;
+        margin: 1rem 0 2rem 0;
       }
 
       &-p {
@@ -75,7 +75,7 @@
   font-family: "bold_avenir";
   font-style: normal;
   font-weight: bold;
-  line-height: 32px;
+  line-height: 2rem;
   font-size: 24px;
   @include tablet{
       position: relative;
@@ -84,18 +84,18 @@
   }
   @include desktop{
       position: relative;
-      bottom: 385px; left: 1068px
+      bottom: 24rem; left: 66.75rem;
   }
 
   &__fineprint {
-    margin: 16px 0 0 0;
+    margin: 1rem 0 0 0;
     padding-bottom: 24px;
     @include tablet{
-        margin: -90px 0 0 28px;
-        padding-bottom: 48px;
+        margin: -5.625rem 0 0 1.75rem;
+        padding-bottom: 3rem;
     }
     @include desktop{
-        padding-left: 36px;
+        padding-left: 2.25rem;
     }
   }
 }
@@ -107,6 +107,6 @@
         font-size: 0.9rem;
     }
     @include desktop{
-        padding-right: 350px;
+        padding-right: 21.875rem;
     }
 }

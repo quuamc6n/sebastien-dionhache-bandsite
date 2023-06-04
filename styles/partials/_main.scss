@@ -1,12 +1,12 @@
 @use "./breakpoints" as *;
 
 .main h2 {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   @include tablet{
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
   @include desktop{
-    padding-left: 36px;
+    padding-left: 2.25rem;
   }
 }
 
@@ -16,7 +16,7 @@
     display: flex;
 
     &-div{
-      margin: 0 50px;
+      margin: 0 3.125rem;
     }
 
     &-image {
@@ -35,22 +35,22 @@
       font-family: "avenir";
       font-style: normal;
       font-weight: 500;
-      line-height: 22px;
-      font-size: 14px;
+      line-height: 1.375rem;
+      font-size: 0.875rem;
       text-align: left;
       margin-bottom: 0;
       @include tablet{
-        font-size: 20px;
-        margin: 24px 16px 16px 32px;
+        font-size: 1.25rem;
+        margin: 1.5rem 1rem 1rem 2rem;
       }
       @include desktop{
-        margin: 16px 32px;
+        margin: 1rem 2rem;
         width: 60%;
       }
       &-signature{
-        margin: 8px 0 32px 0;
+        margin: 0.5rem 0 2rem 0;
         @include tablet{
-          margin: 0 0 16px 32px;
+          margin: 0 0 1rem 2rem;
         }
       }
     }
@@ -59,19 +59,19 @@
       font-family: "avenir";
       font-style: normal;
       font-weight: 500;
-      margin-top: 16px;
+      margin-top: 1rem;
       @include tablet{
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bold;
-        margin-left: 32px;
-        margin-top: 48px;
+        margin-left: 2rem;
+        margin-top: 3rem;
       }
     }
     &-origin {
       @include tablet{
         display: flex;
         justify-content: space-around;
-        margin: 0 32px;
+        margin: 0 2rem;
         text-align: left;
         }
 
@@ -79,12 +79,12 @@
         font-family: "avenir";
         font-style: normal;
         font-weight: 400;
-        margin-top: 16px;
+        margin-top: 1rem;
         @include tablet{
           margin: 0;
         }
         &-right{
-          margin-left: 20px;
+          margin-left: 1.25rem;
         }
       }
     }
