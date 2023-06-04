@@ -1,9 +1,3 @@
-// .header{
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//     font-weight: 700;
-// }
-
 .nav {
     display: flex;
     flex-direction: column;
@@ -18,21 +12,20 @@
         justify-content: space-around;
         list-style-type: none;
         text-decoration: none;
-        font-size: .8125rem;
-        line-height: 1.375rem;
-        font-weight: 400;
     }
 
     &__item{
         display: flex;
         justify-content: center;
+        font-family: "bold_avenir";
+        font-style: normal;
+        font-weight: bold;
+        line-height: 2rem;
+        font-size: 1.5rem;
         
         &-link{
             text-decoration: none;
             color: white;
-            font-family: "regular_avenir";
-            font-weight: 400;
-            font-style: normal;
-        }
+         }
     }
 }

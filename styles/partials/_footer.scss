@@ -20,8 +20,15 @@
             &-email{
                 margin: 2rem 0;
             }
+            
             &-p{
                 margin: 0;
+
+                &--normal{
+                    font-family: "regular__avenir";
+                    font-style: normal;
+                    font-weight: 400;
+                }
             }
         }
     }
@@ -30,6 +37,15 @@
     }
 }
 
-.copyright__fineprint{
-    margin: 0;
+.copyright{
+    margin-top: 5rem;
+    font-family: "bold_avenir";
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2rem;
+    font-size: 1.5rem;
+
+    &__fineprint{
+        margin: 1rem 0;
+    }
 }
