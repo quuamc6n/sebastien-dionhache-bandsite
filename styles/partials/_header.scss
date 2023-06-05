@@ -8,7 +8,7 @@
     width: 100vw;
     height: 15vh;
     background-color: #323232;
-    color: white;
+    color: #E1E1E1;
     @include tablet{
         flex-direction: row;
         justify-content: left;
@@ -34,6 +34,21 @@
             @include tablet{
             margin-left: 3rem;
             }
+
+            &-link{
+                text-decoration: none;
+                color: #E1E1E1;
+            }
+
+            //only here until I have multiple pages to alter the underline appropriately
+            //depending on what page user is on
+            &-link-bio{
+                @include nav-underline;
+                
+            }
+            &-link:active, &-link:hover{
+                @include nav-underline;
+            }
         }
     }
 
@@ -45,7 +60,7 @@
         
         &-link{
             text-decoration: none;
-            color: white;
+            color: #E1E1E1;
             @include regular-font;
             font-weight: 100;
             @include tablet{
@@ -53,5 +68,9 @@
                 font-size: 1.5rem;
             }
          }
+
+         &-link:active, &-link:hover{
+            @include bandsite-underline;
+        }
     }
 }
