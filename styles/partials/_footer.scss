@@ -20,7 +20,7 @@
     @include tablet{
         margin: 1rem 1rem 1rem 0;
         padding-top: 0;
-        font-size: 2.5rem;
+        font-size: 2.35rem;
     }
   }
 
@@ -31,7 +31,7 @@
         padding-top: 2rem;
         display: flex;
         align-items: center;
-        margin: 2rem 0 1rem 1.75rem;
+        margin: 2rem 0 1rem 1rem;
     }
     @include desktop{
         padding-left: 2.25rem;
@@ -41,7 +41,7 @@
         @include tablet{
             display: flex;
             flex-direction: column;
-            margin-right: 1.75rem;
+            margin-right: 1.5rem;
         }
     }
 
@@ -88,7 +88,7 @@
     margin: 1rem 0 0 0;
     padding-bottom: 1.5rem;
     @include tablet{
-        margin: -5.625rem 0 0 1.75rem;
+        margin: -5.625rem 0 0 1rem;
         padding-bottom: 3rem;
     }
     @include desktop{
