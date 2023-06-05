@@ -6,6 +6,9 @@
   color: white;
   padding-left: 1rem;
   @include regular-font;
+  @include desktop{
+    padding-left: 4.8rem;
+  }
 
   &__socials{
       @include tablet{
@@ -34,7 +37,8 @@
         margin: 2rem 0 1rem 1rem;
     }
     @include desktop{
-        padding-left: 2.25rem;
+        padding-left: 0;
+        margin-left: 0;
     }
 
     &-tablet{
@@ -42,6 +46,9 @@
             display: flex;
             flex-direction: column;
             margin-right: 1.5rem;
+        }
+        @include desktop{
+          margin-right: 3rem;
         }
     }
 
@@ -68,6 +75,16 @@
       padding-right: 1.5rem;
     }
   }
+  &__section{
+    @include tablet{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 0.9rem;
+    }
+    @include desktop{
+        justify-content: flex-start;
+    }
+  }
 }
 .copyright {
   font-weight: 100;
@@ -81,7 +98,7 @@
   }
   @include desktop{
       position: relative;
-      bottom: 24rem; left: 66.75rem;
+      bottom: 24rem; left: 63rem;
   }
 
   &__fineprint {
@@ -92,18 +109,7 @@
         padding-bottom: 3rem;
     }
     @include desktop{
-        padding-left: 2.25rem;
+        margin-left: 0;
     }
   }
-}
-
-.footer__section{
-    @include tablet{
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 0.9rem;
-    }
-    @include desktop{
-        padding-right: 21.875rem;
-    }
 }

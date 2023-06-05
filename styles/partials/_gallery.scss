@@ -27,7 +27,6 @@
         }
         @include desktop{
             margin: 1rem 3rem;
-            padding: 0 3rem;
             justify-content: space-evenly;
         }
         &-image{
@@ -39,6 +38,9 @@
                 width: 30%;
                 margin: 0.75rem;
                 justify-content: space-evenly;
+            }
+            @include desktop{
+                margin: 0.75rem 0;
             }
         }
     }
