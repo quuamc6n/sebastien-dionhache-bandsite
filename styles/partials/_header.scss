@@ -2,75 +2,77 @@
 @use "./variables.scss" as *;
 
 .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 15vh;
+  background-color: #323232;
+  color: #e1e1e1;
+  @include tablet {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
     height: 15vh;
-    background-color: #323232;
-    color: #E1E1E1;
-    @include tablet{
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        height: 15vh;
-    }
-    @include desktop{
-        padding-left: 3rem;
-        height: 10vh;
-    }
+  }
+  @include desktop {
+    padding-left: 3rem;
+    height: 10vh;
+  }
 
-    &__list{
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1.5rem;
-        list-style-type: none;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    list-style-type: none;
+    text-decoration: none;
+
+    &-item {
+      @include regular-font;
+      font-weight: 100;
+
+      @include tablet {
+        margin-left: 3rem;
+      }
+
+      &-link {
         text-decoration: none;
-        
-        &-item{
-            @include regular-font;
-            font-weight: 100;
+        color: #e1e1e1;
 
-            @include tablet{
-            margin-left: 3rem;
-            }
-
-            &-link{
-                text-decoration: none;
-                color: #E1E1E1;
-            }
-
-            //only here until I have multiple pages to alter the underline appropriately
-            //depending on what page user is on
-            &-link-bio{
-                @include nav-underline;
-                
-            }
-            &-link:active, &-link:hover{
-                @include nav-underline;
-            }
+        //like this until multiple pages. Had bugs placing it in a mixin so I coded here.
+        //can address underline under appropriate link with multiple links.
+        &-bio {
+          text-decoration: underline solid white;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 2rem;
+          font-weight: bold;
+          color: white;
         }
+      }
+      &-link:hover {
+        text-decoration: underline solid white;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2rem;
+        color: white;
+      }
     }
+  }
 
-    &__item{
-        display: flex;
-        justify-content: center;
-        line-height: 2rem;
+  &__item {
+    display: flex;
+    justify-content: center;
+    line-height: 2rem;
+    font-size: 1.5rem;
+
+    &-link {
+      text-decoration: none;
+      color: #e1e1e1;
+      @include regular-font;
+      font-weight: 100;
+      @include tablet {
+        margin-left: 2rem;
         font-size: 1.5rem;
-        
-        &-link{
-            text-decoration: none;
-            color: #E1E1E1;
-            @include regular-font;
-            font-weight: 100;
-            @include tablet{
-                margin-left: 2rem;
-                font-size: 1.5rem;
-            }
-         }
-
-         &-link:active, &-link:hover{
-            @include bandsite-underline;
-        }
+      }
     }
+  }
 }

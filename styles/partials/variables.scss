@@ -16,7 +16,15 @@
   font-weight: 600;
 }
 
-@mixin nav-underline {
+  @mixin nav-underline-mobile {
+  text-decoration: underline solid white;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.75rem;
+  font-weight: bold;
+  color: white;
+}
+
+@mixin nav-underline-tablet {
   text-decoration: underline solid white;
   text-decoration-thickness: 2px;
   text-underline-offset: 4.05rem;
