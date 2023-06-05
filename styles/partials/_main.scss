@@ -18,7 +18,7 @@
     display: flex;
 
     &-image {
-      height: 30vh;
+      height: 20vh;
       width: 100%;
       @include tablet {
         width: 90%;
@@ -46,6 +46,7 @@
       &-signature {
         margin: 0.5rem 0 2rem 0;
         @include demi-font;
+        font-size: 0.875rem;
         @include tablet {
           margin: 0 0 1rem 2rem;
         }

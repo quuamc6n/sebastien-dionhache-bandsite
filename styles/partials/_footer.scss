@@ -16,6 +16,7 @@
   &__title {
     margin: 1rem 0;
     padding-top: 1rem;
+    @include demi-font;
     @include tablet{
         margin: 1rem 1rem 1rem 0;
         padding-top: 0;
@@ -49,11 +50,15 @@
       @include demi-font;
 
       &-email {
-        margin: 1rem 0 2rem 0;
+        margin: 1.5rem 0 2.5rem 0;
       }
 
       &-p {
         margin: 0;
+
+        &--normal{
+          @include regular-font;
+        }
       }
     }
   }

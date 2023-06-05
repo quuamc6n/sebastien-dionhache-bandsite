@@ -47,6 +47,7 @@
             text-decoration: none;
             color: white;
             @include regular-font;
+            font-weight: 100;
             @include tablet{
                 margin-left: 2rem;
                 font-size: 1.5rem;
