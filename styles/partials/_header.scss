@@ -39,15 +39,16 @@
         text-decoration: none;
         color: #e1e1e1;
 
-        //like this until multiple pages. Had bugs placing it in a mixin so I coded here.
-        //can address underline under appropriate link with multiple links.
-        &-bio {
-          text-decoration: underline solid white;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 2rem;
-          font-weight: bold;
-          color: white;
-        }
+        //could not get underline to work properly. Holding off for more time.
+        
+        // &-bio {
+        //   text-decoration: underline solid white;
+        //   text-decoration-thickness: 2px;
+        //   text-underline-offset: 2rem;
+        //   font-weight: bold;
+        //   color: white;
+        // }
+        
       }
       &-link:hover {
         text-decoration: underline solid white;
