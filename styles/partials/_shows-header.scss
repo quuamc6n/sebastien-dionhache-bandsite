@@ -1,0 +1,28 @@
+@use "./variables.scss" as *;
+
+.header {
+    display: flex;
+    background-color: #323232;
+    flex-direction: column;
+    @include regular-font;
+    color: white;
+    
+    &__div{
+        display: inherit;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+
+    &__nav{
+        //Had to add height for align-items to work. Estimated my best
+        display: inherit;
+        justify-content: space-between;
+        padding: 0 10% 0 10%;
+
+        &-item {
+            padding: 1rem;
+        }
+    }
+}

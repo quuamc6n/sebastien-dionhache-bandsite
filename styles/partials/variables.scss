@@ -16,26 +16,36 @@
   font-weight: 600;
 }
 
-  @mixin nav-underline-mobile {
-  text-decoration: underline solid white;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 1.75rem;
-  font-weight: bold;
-  color: white;
+@mixin mobile-padding {
+  padding: 0 1rem;
 }
 
-@mixin nav-underline-tablet {
-  text-decoration: underline solid white;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4.05rem;
-  font-weight: bold;
-  color: white;
+@mixin tablet-desktop-padding {
+  padding: 0 2.25rem
 }
 
-@mixin bandsite-underline {
-  text-decoration: underline solid white;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3.8rem;
-  font-weight: bold;
-  color: white;
-}
+//Need to figure out why/how this was not working/make it work
+
+// @mixin nav-underline-mobile {
+//   text-decoration: underline solid white;
+//   text-decoration-thickness: 2px;
+//   text-underline-offset: 1.75rem;
+//   font-weight: bold;
+//   color: white;
+// }
+
+// @mixin nav-underline-tablet {
+//   text-decoration: underline solid white;
+//   text-decoration-thickness: 2px;
+//   text-underline-offset: 4.05rem;
+//   font-weight: bold;
+//   color: white;
+// }
+
+// @mixin bandsite-underline {
+//   text-decoration: underline solid white;
+//   text-decoration-thickness: 2px;
+//   text-underline-offset: 3.8rem;
+//   font-weight: bold;
+//   color: white;
+// }

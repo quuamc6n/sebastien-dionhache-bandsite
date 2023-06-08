@@ -1,0 +1,48 @@
+@use "./variables.scss" as *;
+
+.main{
+    @include regular-font;
+    line-height: 1.125rem;
+
+    &__h2{
+        @include demi-font;
+        padding-left: 1rem;
+        font-size: 2rem;
+    }
+    &__list{
+        padding: 1rem;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+
+        &-item{
+            border-bottom: 1px solid #E1E1E1;
+
+            &-visible {
+                background-color: #E1E1E1;
+            }
+            
+            &:hover {
+                background-color: #FAFAFA;
+            }
+
+            &-title{
+                color: #AFAFAF;
+                font-size: 0.8125rem;
+            }
+            &-text{
+                padding-top: 0.5rem;
+            }
+            &-button{
+                background-color: #323232;
+                color: #FFFFFF;
+                width: 100%;
+                border-radius: 4px;
+                border-style: none;
+                margin: 1rem 0;
+                line-height: 1.25rem;
+                @include demi-font;
+            }
+        }
+    }
+}

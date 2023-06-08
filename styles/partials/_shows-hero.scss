@@ -1,0 +1,12 @@
+@use "./breakpoints" as *;
+@use "./variables.scss" as *;
+@use "./shows-resets" as *;
+
+.hero{
+    display: flex;
+    justify-content: center;
+    @include mobile-padding;
+    
+
+
+}
