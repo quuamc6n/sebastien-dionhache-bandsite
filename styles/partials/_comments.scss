@@ -5,8 +5,39 @@
 .comments{
     display: flex;
     @include regular-font;
+    @include mobile-padding;
 
     &__h2{
         @include mobile-padding;
+    }
+
+    &__container{
+        
+        &-main{
+            border-bottom: 1px solid #E1E1E1;
+
+            &-avatar{
+
+            }
+
+            &-text{
+
+                &-input{
+                    margin-bottom: 1rem;
+                }
+
+                &-name{
+                    @include demi-font;
+                }
+                &-date{
+                    color: #AFAFAF;
+                }
+            }
+
+            &-name-date{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
 }
