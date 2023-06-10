@@ -8,24 +8,28 @@
     min-height: 2rem;
     border-bottom: 1px solid #E1E1E1;
     padding-bottom: 1rem;
+    display: flex;
 
     &__div{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 0.75rem;
+        
+        &-main{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0.75rem;
 
-        &-label{
-            margin-bottom: 0.25px;
-        }
+            &-label{
+                margin-bottom: 0.25px;
+            }
 
-        &-input{
-            border-radius: 0.25rem;
-            border: 1px solid #E1E1E1;
-            height: 2.5rem;
+            &-input{
+                border-radius: 0.25rem;
+                border: 1px solid #E1E1E1;
+                height: 2.5rem;
 
-            &-textarea{
-                height: 7rem;
+                &-textarea{
+                    height: 7rem;
+                }
             }
         }
     }
