@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="./styles/bio.css"/>
+    <link rel="stylesheet" href="./styles/bio.css" />
     <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
@@ -15,8 +15,18 @@
           <h2><a class="nav__item-link" href="./index.html">BANDSITE</a></h2>
         </div>
         <ul class="nav__list">
-          <li class="nav__list-item"><a class = "nav__list-item-link nav__list-item-link-bio" href="#">Biography</a></li>
-          <li class="nav__list-item"><a class = "nav__list-item-link nav__list-item-link-shows" href="./pages/shows.html">Shows</a></li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link nav__list-item-link-bio" href="#"
+              >Biography</a
+            >
+          </li>
+          <li class="nav__list-item">
+            <a
+              class="nav__list-item-link nav__list-item-link-shows"
+              href="./pages/shows.html"
+              >Shows</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -122,12 +132,37 @@
       </div>
     </section>
 
-    <h2 class = comments__h2>Join the Conversation</h2>
-    <section class = comments>
-      <div class = comments__container>
-      </div>
+    <h2 class="comments__h2">Join the Conversation</h2>
+    <section>
+      <form class="form">
+        <div class="form__div">
+          <label class="form__div-label">NAME</label>
+          <input
+            class="form__div-input"
+            type="text"
+            name="'name"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <div class="form__div">
+          <label class="form__div-label">COMMENT</label>
+          <input
+            class="form__div-input form__div-input-textarea"
+            type="textarea"
+            name="comment"
+            placeholder="Add a new comment"
+          />
+        </div>
+        <div>
+          <button class = form__button>COMMENT</button>
+        </div>
+      </form>
     </section>
 
+    <section class="comments">
+      <div class="comments__container"></div>
+    </section>
 
     <footer class="footer">
       <div class="footer__div">
@@ -150,7 +185,7 @@
           />
         </div>
       </div>
-        <section class = footer__section>
+      <section class="footer__section">
         <div class="footer__div-tablet">
           <div class="footer__div-management">
             <p class="footer__div-management-p">Cam Adams</p>
@@ -217,11 +252,11 @@
             cwhyte@archentertainment.com
           </p>
         </div>
-        </section>
-        <h2 class="copyright">BANDSITE</h2>
-        <p class="copyright__fineprint">
-          Copyright The Bees Knees &copy; 2021 All Rights Reserved
-        </p>
+      </section>
+      <h2 class="copyright">BANDSITE</h2>
+      <p class="copyright__fineprint">
+        Copyright The Bees Knees &copy; 2021 All Rights Reserved
+      </p>
     </footer>
   </body>
 </html>

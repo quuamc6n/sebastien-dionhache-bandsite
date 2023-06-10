@@ -1,0 +1,39 @@
+@use "./breakpoints" as *;
+@use "./resets" as *;
+@use "./variables.scss" as *;
+
+.form{
+    @include regular-font;
+    @include mobile-padding;
+    min-height: 2rem;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 1rem;
+
+    &__div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0.75rem;
+
+        &-label{
+            margin-bottom: 0.25px;
+        }
+
+        &-input{
+            border-radius: 0.25rem;
+            border: 1px solid #E1E1E1;
+            height: 2.5rem;
+
+            &-textarea{
+                height: 7rem;
+            }
+        }
+    }
+    &__button{
+        height: 40px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: #323232;
+        color: #FFFFFF;
+    }
+}

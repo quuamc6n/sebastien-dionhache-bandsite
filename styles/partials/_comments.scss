@@ -18,17 +18,17 @@
             display: flex;
 
             &-avatar{
-                width: 180px;
-                height: 40px;
+                width: 100%;
+                max-width: 36px;
+                max-height: 36px;
                 border: 1px white solid;
                 background-color: #E1E1E1;
                 border-radius: 50%;
                 overflow: hidden;
-                margin: 1rem 1rem 0 0;
+                margin: 1rem 1rem 6.5rem 0;
             }
 
             &-text{
-                
 
                 &-input{
                     margin-bottom: 1rem;
