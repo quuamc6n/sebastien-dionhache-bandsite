@@ -51,16 +51,22 @@ function createCard (array) {
       const container = document.createElement("div");
       container.className = "comments__container-main";
       mainContainer.appendChild(container);
+      
+      // create the avatar container and append into main div
+      const avatarContainer = document.createElement("div");
+      avatarContainer.className = "comments__container-main-avatar";
+      container.appendChild(avatarContainer);
+
+      // create image element to house avatar
+      const displayAvatar = document.createElement('img');
+      displayAvatar.className = 'comments__container-main-avatar-img';
+      avatarContainer.appendChild(displayAvatar);
+      displayAvatar.src = '';
 
       // create text div and append into main div
       const textContainer = document.createElement("div");
       textContainer.className = "comments__container-main-text";
       container.appendChild(textContainer);
-
-      // create avatar div and append into main div
-      const avatarContainer = document.createElement("div");
-      avatarContainer.className = "comments__container-main-avatar";
-      container.appendChild(avatarContainer);
 
       // create div holding name and date for styling
       const nameDateDiv = document.createElement("div");
