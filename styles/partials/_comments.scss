@@ -1,0 +1,12 @@
+@use "./breakpoints" as *;
+@use "./shows-resets" as *;
+@use "./variables.scss" as *;
+
+.comments{
+    display: flex;
+    @include regular-font;
+
+    &__h2{
+        @include mobile-padding;
+    }
+}
