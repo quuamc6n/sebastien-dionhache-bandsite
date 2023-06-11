@@ -1,25 +1,26 @@
 @use "./breakpoints" as *;
 @use "./variables.scss" as *;
 
-.main h2 {
-  margin-bottom: 0.5rem;
-  @include demi-font;
-  @include tablet {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-  }
-  @include desktop {
-    padding-left: 3rem;
-  }
-}
-
 .main {
+  
+  &__h2 {
+      margin-bottom: 0;
+      padding: 1rem 0 0 0;
+      @include demi-font;
+      @include tablet {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+      @include desktop {
+        padding-left: 3rem;
+      }
+    }
+
   &__section {
     display: flex;
     justify-content: center;
 
     &-image {
-      height: 20vh;
       width: 100%;
       @include tablet {
         width: 85%;
@@ -46,7 +47,7 @@
         line-height: 2rem;
       }
       &-signature {
-        margin: 0.5rem 0 2rem 0;
+        margin-bottom: 0.5rem;
         @include demi-font;
         font-size: 0.875rem;
         @include tablet {
@@ -90,7 +91,6 @@
       &-p {
         @include regular-font;
         line-height: 1.5rem;
-        margin-top: 1rem;
         @include tablet {
           margin: 0;
         }

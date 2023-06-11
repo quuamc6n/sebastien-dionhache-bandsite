@@ -126,56 +126,56 @@ function getNewComment() {
     return newComment.value;
 }
 
-function pushNewestComment (func) {
-    console.log(func.Name);
-    let name = func.Name;
-    let text = func.Text;
-    let date = func.Timestamp;
+// function pushNewestComment (func) {
+//     console.log(func.Name);
+//     let name = func.Name;
+//     let text = func.Text;
+//     let date = func.Timestamp;
 
-  // create main div that will hold text and avatar
-  const container = document.createElement("div");
-  container.className = "comments__container-main";
-  mainContainer.prepend(container);
+//   // create main div that will hold text and avatar
+//   const container = document.createElement("div");
+//   container.className = "comments__container-main";
+//   mainContainer.prepend(container);
 
-  // create the avatar container and append into main div
-  const avatarContainer = document.createElement("div");
-  avatarContainer.className = "comments__container-main-avatar";
-  container.prepend(avatarContainer);
+//   // create the avatar container and append into main div
+//   const avatarContainer = document.createElement("div");
+//   avatarContainer.className = "comments__container-main-avatar";
+//   container.prepend(avatarContainer);
 
-  // create image element to house avatar
-  const displayAvatar = document.createElement("img");
-  displayAvatar.className = "comments__container-main-avatar-img";
-  avatarContainer.appendChild(displayAvatar);
-  displayAvatar.src = "";
+//   // create image element to house avatar
+//   const displayAvatar = document.createElement("img");
+//   displayAvatar.className = "comments__container-main-avatar-img";
+//   avatarContainer.appendChild(displayAvatar);
+//   displayAvatar.src = "";
 
-  // create text div and append into main div
-  const textContainer = document.createElement("div");
-  textContainer.className = "comments__container-main-text";
-  container.appendChild(textContainer);
+//   // create text div and append into main div
+//   const textContainer = document.createElement("div");
+//   textContainer.className = "comments__container-main-text";
+//   container.appendChild(textContainer);
 
-  // create div holding name and date for styling
-  const nameDateDiv = document.createElement("div");
-  nameDateDiv.className = "comments__container-main-name-date";
-  textContainer.appendChild(nameDateDiv);
+//   // create div holding name and date for styling
+//   const nameDateDiv = document.createElement("div");
+//   nameDateDiv.className = "comments__container-main-name-date";
+//   textContainer.appendChild(nameDateDiv);
 
-  // create p for name and prepend into nameDateDiv
-  const namePar = document.createElement("p");
-  namePar.className = "comments__container-main-text-name";
-  nameText = document.createTextNode(name);
-  namePar.appendChild(nameText);
-  nameDateDiv.appendChild(namePar);
+//   // create p for name and prepend into nameDateDiv
+//   const namePar = document.createElement("p");
+//   namePar.className = "comments__container-main-text-name";
+//   nameText = document.createTextNode(name);
+//   namePar.appendChild(nameText);
+//   nameDateDiv.appendChild(namePar);
 
-  // create p for date and append into nameDateDiv
-  const datePar = document.createElement("p");
-  datePar.className = "comments__container-main-text-date";
-  dateText = document.createTextNode(date);
-  datePar.appendChild(dateText);
-  nameDateDiv.appendChild(datePar);
+//   // create p for date and append into nameDateDiv
+//   const datePar = document.createElement("p");
+//   datePar.className = "comments__container-main-text-date";
+//   dateText = document.createTextNode(date);
+//   datePar.appendChild(dateText);
+//   nameDateDiv.appendChild(datePar);
 
-  // create p for text and append it to textContainer div
-  const textPar = document.createElement("p");
-  textPar.className = "comments__container-main-text-input";
-  textInput = document.createTextNode(text);
-  textPar.appendChild(textInput);
-  textContainer.appendChild(textPar);
-}
+//   // create p for text and append it to textContainer div
+//   const textPar = document.createElement("p");
+//   textPar.className = "comments__container-main-text-input";
+//   textInput = document.createTextNode(text);
+//   textPar.appendChild(textInput);
+//   textContainer.appendChild(textPar);
+// }

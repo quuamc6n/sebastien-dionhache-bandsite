@@ -17,8 +17,6 @@
   }
 
   &__title {
-    margin: 1rem 0;
-    padding-top: 1rem;
     @include demi-font;
     @include tablet{
         margin: 1rem 1rem 1rem 0;
@@ -29,7 +27,6 @@
 
   &__div {
     margin: 1rem 0 0 0;
-    padding-bottom: 1rem;
     @include tablet{
         padding-top: 2rem;
         display: flex;
@@ -58,10 +55,12 @@
 
       &-email {
         margin: 1.5rem 0 2.5rem 0;
+        padding-top: 0;
       }
 
       &-p {
         margin: 0;
+        padding-top: 0;
 
         &--normal{
           @include regular-font;
@@ -73,6 +72,7 @@
   &__socials {
     &-image {
       padding-right: 1.5rem;
+      padding-bottom: 0.75rem;
     }
   }
   &__section{
