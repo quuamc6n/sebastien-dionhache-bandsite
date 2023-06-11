@@ -17,30 +17,10 @@ let commentInformation = [
   },
 ];
 
-//Extract names from object
-// function getNames (array) {
-//     commentInformation.forEach((obj) => {
-//         nameArr.push(obj.Name);
-//     });
-//     return (nameArr);
-// };
-
-// //Extract comments from object
-// function getComments (array) {
-//     commentInformation.forEach((obj) => {
-//       commentsArr.push(obj.Text);
-//     });
-//     return (commentsArr);
-// }
-
-// //Extract date from object
-// function getTime(array) {
-//   commentInformation.forEach((obj) => {
-//     return obj.Timestamp;
-//   });
-// }
-
 const mainContainer = document.querySelector(".comments__container");
+const formEvent = document.querySelector(".form");
+
+
 function createCard (array) {
     for (let i = 0; i < array.length; i++){
       let name = array[i].Name;
@@ -96,3 +76,106 @@ function createCard (array) {
     }
 }
 createCard(commentInformation);
+
+const formAvatar = document.querySelector('.form__img');
+function createFormAvatar (img){
+    const ele = document.createElement('img');
+    ele.src = img;
+    ele.className = 'form__img--center';
+    ele.style.backgroundImage = img;
+    formAvatar.appendChild(ele);
+}
+createFormAvatar(
+    '../Assets/Images/Mohan-muruge.jpg'
+);
+
+
+function displayComment(comment){
+    formEvent.addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
+    const button = document.querySelector('.form__button');
+    button.addEventListener('click', () => {
+        commentInformation.unshift({
+          Name: getNewName(),
+          Text: getNewComment(),
+          Timestamp: getCurrentTime(),
+        });
+        console.log(commentInformation[0]);
+        return commentInformation[0];
+    });
+    formEvent.reset();
+}
+displayComment(commentInformation);
+
+function getCurrentTime(){
+    let today = new Date();
+    let DD = today.getDate();
+    let MM = today.getMonth()+1;
+    let YY = today.getFullYear();
+    return (`${MM}/${DD}/${YY}`);
+};
+
+function getNewName(){
+    const newName = document.getElementById('newName');
+    return newName.value;
+}
+
+function getNewComment() {
+    const newComment = document.getElementById("newComment");
+    return newComment.value;
+}
+
+function pushNewestComment (func) {
+    console.log(func.Name);
+    let name = func.Name;
+    let text = func.Text;
+    let date = func.Timestamp;
+
+  // create main div that will hold text and avatar
+  const container = document.createElement("div");
+  container.className = "comments__container-main";
+  mainContainer.prepend(container);
+
+  // create the avatar container and append into main div
+  const avatarContainer = document.createElement("div");
+  avatarContainer.className = "comments__container-main-avatar";
+  container.prepend(avatarContainer);
+
+  // create image element to house avatar
+  const displayAvatar = document.createElement("img");
+  displayAvatar.className = "comments__container-main-avatar-img";
+  avatarContainer.appendChild(displayAvatar);
+  displayAvatar.src = "";
+
+  // create text div and append into main div
+  const textContainer = document.createElement("div");
+  textContainer.className = "comments__container-main-text";
+  container.appendChild(textContainer);
+
+  // create div holding name and date for styling
+  const nameDateDiv = document.createElement("div");
+  nameDateDiv.className = "comments__container-main-name-date";
+  textContainer.appendChild(nameDateDiv);
+
+  // create p for name and prepend into nameDateDiv
+  const namePar = document.createElement("p");
+  namePar.className = "comments__container-main-text-name";
+  nameText = document.createTextNode(name);
+  namePar.appendChild(nameText);
+  nameDateDiv.appendChild(namePar);
+
+  // create p for date and append into nameDateDiv
+  const datePar = document.createElement("p");
+  datePar.className = "comments__container-main-text-date";
+  dateText = document.createTextNode(date);
+  datePar.appendChild(dateText);
+  nameDateDiv.appendChild(datePar);
+
+  // create p for text and append it to textContainer div
+  const textPar = document.createElement("p");
+  textPar.className = "comments__container-main-text-input";
+  textInput = document.createTextNode(text);
+  textPar.appendChild(textInput);
+  textContainer.appendChild(textPar);
+}

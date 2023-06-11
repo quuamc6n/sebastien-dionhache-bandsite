@@ -10,22 +10,43 @@
     padding-bottom: 1rem;
     display: flex;
 
+    &__img{
+        width: 100%;
+        max-width: 36px;
+        max-height: 36px;
+        border: 1px white solid;
+        background-color: #E1E1E1;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 2.5rem;
+        display: flex;
+        margin-right: 1rem;
+
+        &--center{
+            padding: 0;
+            width: 100%;
+        }
+    }
     &__div{
-        
+        width: 100%;
+
         &-main{
             display: flex;
             flex-direction: column;
-            width: 100%;
-            padding: 0.75rem;
+            padding: 1rem 0;
 
             &-label{
                 margin-bottom: 0.25px;
+                font-size: 0.8rem;
+                color: #AFAFAF;
             }
 
             &-input{
                 border-radius: 0.25rem;
                 border: 1px solid #E1E1E1;
                 height: 2.5rem;
+                background-color: #FAFAFA;
+                margin-top: 0.5rem;
 
                 &-textarea{
                     height: 7rem;
