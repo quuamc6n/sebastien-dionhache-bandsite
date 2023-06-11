@@ -1,51 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shows</title>
-    <link rel="stylesheet" href="../styles/shows.css">
+    <link rel="stylesheet" href="../styles/shows.css" />
     <script src="../scripts/build-shows-page.js" defer></script>
-</head>
-<body>
-    <header class = header>
-        <div class = header__div>
-            <h2 class = header__div-title>BANDSITE</h2>
-        </div>
-        <nav class = header__nav>
-            <!-- Same as sprint 1 but responsive -->
-                <p class = header__nav-item>Biography</p>
-                <p class = header__nav-item>Shows</p>
-        </nav>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__div">
+        <h2 class="header__div-title">BANDSITE</h2>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <div class="header__nav-list-div">
+            <li class="header__nav-list-item">
+              <a
+                class="header__nav-list-item-link"
+                href="../index.html"
+                >Biography</a
+              >
+            </li>
+          </div>
+          <div class="header__nav-list-div header__nav-list-div--border">
+            <li class="header__nav-list-item">
+              <a
+                class="header__nav-list-item-link"
+                href="./shows.html"
+                >Shows</a
+              >
+            </li>
+          </div>
+        </ul>
+      </nav>
     </header>
 
     <!-- Need background image -->
-    <hero class = hero>
-        <!-- Will need to set section with equal padding on each side -->
-        <section class = hero__section>
-            <!-- Extra padding here and wrap for h1 to /br -->
-            <div class = hero__div>
-                <p class = hero__div-p>Punk Goes Acoustic Album</p>
-                <h1>Rise Against</h1>
-            </div>
-            <div class = hero__div>
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/253125884&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rise-against-official" title="Rise Against" target="_blank" style="color: #cccccc; text-decoration: none;">Rise Against</a> · <a href="https://soundcloud.com/rise-against-official/swing-life-away-album-version" title="Swing Life Away" target="_blank" style="color: #cccccc; text-decoration: none;">Swing Life Away</a></div>
-            </div>
-        </section>
+    <hero class="hero">
+      <section class="hero__section">
+        <div class="hero__div">
+          <p class="hero__div-p">Beautiful Beasts Album</p>
+          <h1>Queen of Yellow x For The Stings</h1>
+        </div>
+        <div class="hero__div-song">
+          <iframe
+            width="100%"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/535872399&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          ></iframe>
+          <div
+            style="
+              font-size: 10px;
+              color: #cccccc;
+              line-break: anywhere;
+              word-break: normal;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+              font-weight: 100;
+            "
+          >
+            <a
+              href="https://soundcloud.com/momomoyouth"
+              title="MØ"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none"
+              >MØ</a
+            >
+            ·
+            <a
+              href="https://soundcloud.com/momomoyouth/blur-feat-foster-the-people"
+              title="Blur (feat. Foster The People)"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none"
+              >Blur (feat. Foster The People)</a
+            >
+          </div>
+        </div>
+      </section>
     </hero>
 
-    <main class = main>
-        <h2 class = main__h2>Shows</h2>
-        <!-- Dynamic JS with date, venue, location, and button as list
+    <main class="main">
+      <h2 class="main__h2">Shows</h2>
+      <!-- Dynamic JS with date, venue, location, and button as list
         will need to consider SASS styling on classes added with JS -->
-        <ul class = main__list>
-            <!-- Space for dynamic JS to insert list items -->
-        </ul>
+      <ul class="main__list">
+        <!-- Space for dynamic JS to insert list items -->
+      </ul>
     </main>
 
-    <footer class = footer>
-        <!-- Same as sprint 1 but responsive. Will deal with this after JS and all is finished-->
+    <footer class="footer">
+      <div class="footer__div">
+        <h2 class="footer__title">Get in Touch</h2>
+        <div class="footer__socials">
+          <img
+            class="footer__socials-image"
+            src="/assets/Icons/SVG/Icon-instagram.svg"
+            alt="Instagram Icon"
+          />
+          <img
+            class="footer__socials-image"
+            src="/assets/Icons/SVG/Icon-facebook.svg"
+            alt="Facebook Icon"
+          />
+          <img
+            class="footer__socials-image"
+            src="/assets/Icons/SVG/Icon-twitter.svg"
+            alt="Twitter Icon"
+          />
+        </div>
+      </div>
+      <section class="footer__section">
+        <div class="footer__div-tablet">
+          <div class="footer__div-management">
+            <p class="footer__div-management-p">Cam Adams</p>
+            <p class="footer__div-management-p">The Bees Knees Management</p>
+          </div>
+          <div class="footer__div-management">
+            <p
+              class="footer__div-management-p footer__div-management-p--normal"
+            >
+              503 Broadway Penthouse,
+            </p>
+            <p
+              class="footer__div-management-p footer__div-management-p--normal"
+            >
+              New York, NY 10012, USA
+            </p>
+          </div>
+
+          <p class="footer__div-management-email">info@thebeesknees.com</p>
+        </div>
+        <div class="footer__div-tablet">
+          <div class="footer__div-management">
+            <p class="footer__div-management-p">Pearl Gregg</p>
+            <p class="footer__div-management-p">Limitless Artist Group</p>
+          </div>
+
+          <div class="footer__div-management">
+            <p
+              class="footer__div-management-p footer__div-management-p--normal"
+            >
+              Booking Agent for
+            </p>
+            <p
+              class="footer__div-management-p footer__div-management-p--normal"
+            >
+              US / South America / Japan
+            </p>
+          </div>
+
+          <p class="footer__div-management-email">
+            pearl.gregg@limitlessag.com
+          </p>
+        </div>
+        <div class="footer__div-tablet">
+          <div class="footer__div-management">
+            <p class="footer__div-management-p">Carson Whyte</p>
+            <p class="footer__div-management-p">ARCH Entertainment</p>
+          </div>
+
+          <div class="footer__div-management">
+            <p
+              class="footer__div-management-p footer__div-management-p--normal"
+            >
+              Booking Agent for
+            </p>
+            <p
+              class="footer__div-management-p footer__div-management-p--normal"
+            >
+              UK / EU / AU
+            </p>
+          </div>
+
+          <p class="footer__div-management-email">
+            cwhyte@archentertainment.com
+          </p>
+        </div>
+      </section>
+      <h2 class="copyright">BANDSITE</h2>
+      <p class="copyright__fineprint">
+        Copyright The Bees Knees &copy; 2021 All Rights Reserved
+      </p>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,6 +1,5 @@
 @use "./partials/fonts" as *;
 @use "./partials/resets" as *;
-@use "./partials/header" as *;
 @use "./partials/hero" as *;
 @use "./partials/main" as *;
 @use "./partials/footer" as *;
@@ -9,6 +8,7 @@
 @use "./partials/variables.scss" as *;
 @use "./partials/comments" as *;
 @use "./partials/bio-form" as *;
+@use "./partials/shows-header" as *;
 
 //Mobile text styles
 // Page Header

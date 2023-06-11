@@ -19,7 +19,7 @@ let commentInformation = [
 const mainContainer = document.querySelector(".comments__container");
 const formEvent = document.querySelector(".form");
 
-
+//Creates comment card and places it into comments section
 function createCard (array) {
     for (let i = 0; i < array.length; i++){
       let name = array[i].Name;
@@ -106,7 +106,7 @@ function displayComment(comment){
 }
 displayComment(commentInformation);
 
-
+// gets current time of comment submission
 function getCurrentTime(){
     let today = new Date();
     let DD = today.getDate();
@@ -115,18 +115,14 @@ function getCurrentTime(){
     return (`${MM}/${DD}/${YY}`);
 };
 
+// gets name of user
 function getNewName(){
     const newName = document.getElementById('newName');
     return newName.value;
 }
 
+// gets comment text from user input
 function getNewComment() {
     const newComment = document.getElementById("newComment");
     return newComment.value;
 }
-
-// function pushNewestComment (obj) {
-
-
-
-// }

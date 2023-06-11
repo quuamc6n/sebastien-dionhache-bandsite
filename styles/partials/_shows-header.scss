@@ -1,4 +1,5 @@
 @use "./variables.scss" as *;
+@use "./breakpoints" as *;
 
 .header {
     display: flex;
@@ -8,7 +9,7 @@
     color: white;
     
     &__div{
-        display: inherit;
+        display: flex;
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 700;
@@ -16,13 +17,39 @@
     }
 
     &__nav{
-        //Had to add height for align-items to work. Estimated my best
-        display: inherit;
-        justify-content: space-between;
-        padding: 0 10% 0 10%;
+        display: flex;
 
-        &-item {
-            padding: 1rem;
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            &-div{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+
+                &--border{
+                    border-bottom: 4px white solid;
+                }
+            }
+
+            &-item {
+                padding: 1rem;
+                list-style-type: none;
+
+                &-link{
+                    text-decoration: none;
+                    color: #e1e1e1;
+
+                    &:hover{
+                        color: #FFFFFF;
+                    }
+                    &:active{
+                        color: #FFFFFF;
+                    }
+                }
+            }
         }
     }
 }

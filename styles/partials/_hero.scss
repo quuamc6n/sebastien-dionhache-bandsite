@@ -25,6 +25,7 @@
         height: 35vh;
         width: 100%;
         opacity: 0.5;
+        padding-top: 0;
         @include tablet{
             height: 70vh;
         }

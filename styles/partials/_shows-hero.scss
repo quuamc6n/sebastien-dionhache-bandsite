@@ -6,7 +6,19 @@
     display: flex;
     justify-content: center;
     @include mobile-padding;
-    
+    padding-bottom: 1rem;
+    background-image: url("../../assets/Images/hero-shows.jpg");
+    background-size: contain;
 
+    &__div{
+        width: 80%;
+        color: #FFFFFF;
+        @include demi-font;
+        line-height: 2rem;
+
+        &-p{
+            @include regular-font;
+        }
+    }
 
 }
