@@ -38,6 +38,7 @@ let myObj = [
 function createListItem(array) {
   if (window.innerWidth > 767) {
     tabletLayout(Object.keys(array[0]));
+
     for (let y = 0; y < array.length; y++) {
       const listEle = document.createElement("li");
       listEle.className = "main__list-item";
@@ -45,6 +46,7 @@ function createListItem(array) {
       listEle.addEventListener("click", () => {
         visibileCheck(listEle);
       });
+
       const dateNode = document.createElement("p");
       dateNode.className = "main__list-item-text";
       dateTextNode = document.createTextNode(array[y].DATE);
@@ -103,18 +105,24 @@ function createListItem(array) {
 
         listEle.appendChild(listEleText);
         listEle.appendChild(listEleTextTwo);
+
+        list.appendChild(listEle);
+        listEle.appendChild(createButton);
+
+        // Only had to comment out this portion of code which helped with Tablet layout but not mobile.
+        // Was not able to complete this portion - got approval from Joe to re-submit
+        // As I sent in the wrong file with this portion not commented out. Sorry about that!
+        // Please let me know if you have any questions
+
+        // const listEleTextTwo = document.createElement("p");
+        // listEleTextTwo.className = "main__list-item-text";
+        // let valuesArray = Object.values(array[i]);
+        // let textNodeTwo = document.createTextNode(valuesArray[x]);
+        // listEleTextTwo.appendChild(textNodeTwo);
+
+        // listEle.appendChild(createButton);
+        // list.appendChild(listEle);
       }
-      list.appendChild(listEle);
-      listEle.appendChild(createButton);
-
-      const listEleTextTwo = document.createElement("p");
-      listEleTextTwo.className = "main__list-item-text";
-      let valuesArray = Object.values(array[i]);
-      let textNodeTwo = document.createTextNode(valuesArray[0]);
-      listEleTextTwo.appendChild(textNodeTwo);
-
-      listEle.appendChild(createButton);
-      list.appendChild(listEle);
     }
   }
 }
