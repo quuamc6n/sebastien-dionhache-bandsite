@@ -13,7 +13,7 @@
         @include demi-font;
         color: white;
         @include tablet{
-            font-size: 3.75rem;
+            font-size: 5rem;
             margin-left: 2rem;
         }
         @include desktop{
@@ -27,7 +27,7 @@
         opacity: 0.5;
         padding-top: 0;
         @include tablet{
-            height: 70vh;
+            height: 100vh;
         }
         @include desktop{
             height: 60vh;

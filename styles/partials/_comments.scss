@@ -6,13 +6,21 @@
     display: flex;
     @include regular-font;
     @include mobile-padding;
+    @include tablet{
+        margin-left: 5rem;
+        margin-right: 2rem;
+    }
 
     &__h2{
         @include mobile-padding;
+        @include tablet{
+            margin: 3rem 0 1rem 1rem;
+            font-size: 3rem;
+            @include demi-font;
+        }
     }
 
     &__container{
-        
         &-main{
             border-bottom: 1px solid #E1E1E1;
             display: flex;
@@ -20,16 +28,20 @@
             &-avatar{
                 width: 100%;
                 max-width: 36px;
-                max-height: 36px;
+                height: 36px;
                 border: 1px white solid;
                 background-color: #E1E1E1;
                 border-radius: 50%;
                 overflow: hidden;
                 margin: 1rem 1rem 6.5rem 0;
+                @include tablet{
+                    max-width: 48px;
+                    height: 48px;
+                }
             }
 
             &-text{
-
+                
                 &-input{
                     margin-bottom: 1rem;
                 }
@@ -47,5 +59,11 @@
                 justify-content: space-between;
             }
         }
+    }
+}
+
+.form{
+    @include tablet{
+        margin-left: 5rem;
     }
 }

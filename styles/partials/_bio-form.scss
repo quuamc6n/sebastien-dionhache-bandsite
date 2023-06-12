@@ -9,11 +9,14 @@
     border-bottom: 1px solid #E1E1E1;
     padding-bottom: 1rem;
     display: flex;
+    @include tablet{
+        margin-right: 3rem;
+    }
 
     &__img{
         width: 100%;
-        max-width: 36px;
-        max-height: 36px;
+        max-width: 2.25rem;
+        max-height: 2.25rem;
         border: 1px white solid;
         background-color: #E1E1E1;
         border-radius: 50%;
@@ -21,6 +24,10 @@
         margin-top: 2.5rem;
         display: flex;
         margin-right: 1rem;
+        @include tablet{
+            max-width: 3rem;
+            max-height: 3rem;
+        }
 
         &--center{
             padding: 0;
@@ -60,5 +67,15 @@
         border-radius: 4px;
         background-color: #323232;
         color: #FFFFFF;
+        @include tablet{
+            width: 30%;
+            margin: 1rem 0;
+        }
+    }
+}
+.button__div{
+    @include tablet{
+        display: flex;
+        justify-content: right;
     }
 }

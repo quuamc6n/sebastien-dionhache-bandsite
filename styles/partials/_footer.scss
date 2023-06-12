@@ -20,7 +20,7 @@
     @include demi-font;
     @include tablet{
         margin: 1rem 1rem 1rem 0;
-        padding-top: 0;
+        padding: 0;
         font-size: 2.35rem;
     }
   }
@@ -93,7 +93,7 @@
   font-size: 1.5rem;
   @include tablet{
       position: relative;
-      bottom: 24rem; left: 36.87rem;
+      bottom: 25.8rem; left: 36.87rem;
       width: 2rem;
   }
   @include desktop{
@@ -105,7 +105,7 @@
     margin: 1rem 0 0 0;
     padding-bottom: 1.5rem;
     @include tablet{
-        margin: -5.625rem 0 0 1rem;
+        margin: -12.625rem 0 0 1rem;
         padding-bottom: 3rem;
     }
     @include desktop{

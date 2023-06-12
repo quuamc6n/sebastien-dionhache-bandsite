@@ -4,7 +4,7 @@
 .gallery{
     background-color: #FAFAFA;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 
     &__h2{
         padding-bottom: 0;
@@ -35,7 +35,6 @@
         &-image{
             width: 100%;
             @include tablet{
-                height: 15vh;
                 width: 30%;
                 margin: 0.75rem;
                 justify-content: space-evenly;

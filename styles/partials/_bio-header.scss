@@ -7,47 +7,52 @@
     flex-direction: column;
     @include regular-font;
     color: white;
+
     @include tablet {
         flex-direction: row;
         justify-content: left;
         align-items: center;
-        }
-    
-    &__div{
+    }
+
+    &__div {
         display: flex;
         justify-content: center;
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 2rem;
-        @include tablet{
+
+        @include tablet {
             margin-left: 2rem;
         }
 
-        &-title{
+        &-title {
             font-weight: 400;
         }
     }
 
-    &__nav{
+    &__nav {
         display: flex;
 
-        &-list{
+        &-list {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            @include tablet{
+
+            @include tablet {
                 height: 125px;
                 padding-top: 2.5rem;
             }
 
-            &-div{
+            &-div {
                 width: 50%;
                 display: flex;
                 justify-content: center;
-                @include tablet{
+
+                @include tablet {
                     margin-left: 3rem;
                 }
-                &--border{
+
+                &--border {
                     border-bottom: 4px white solid;
                 }
             }
@@ -56,14 +61,15 @@
                 padding: 1rem;
                 list-style-type: none;
 
-                &-link{
+                &-link {
                     text-decoration: none;
                     color: #e1e1e1;
 
-                    &:hover{
+                    &:hover {
                         color: #FFFFFF;
                     }
-                    &:active{
+
+                    &:active {
                         color: #FFFFFF;
                         font-weight: bold;
                     }

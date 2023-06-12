@@ -8,8 +8,8 @@
       padding: 1rem 0 0 0;
       @include demi-font;
       @include tablet {
-        margin-bottom: 2rem;
-        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-size: 3rem;
       }
       @include desktop {
         padding-left: 3rem;
@@ -19,12 +19,14 @@
   &__section {
     display: flex;
     justify-content: center;
+    @include tablet{
+      margin: 0 3rem;
+    }
 
     &-image {
       width: 100%;
       @include tablet {
-        width: 85%;
-        height: 40vh;
+        width: 100%;
       }
       @include desktop {
         width: 80%;
@@ -38,8 +40,9 @@
       text-align: left;
       margin-bottom: 0;
       @include tablet {
-        font-size: 1.25rem;
-        margin: 1.5rem 3rem 1rem 3rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin: 1.5rem 2rem 1rem 3rem;
       }
       @include desktop {
         padding: 1rem 4.8rem;
@@ -51,7 +54,8 @@
         @include demi-font;
         font-size: 0.875rem;
         @include tablet {
-          margin: 0 0 1rem 3rem;
+          font-size: 1rem;
+          margin: -1rem 0 1rem 3rem;
         }
         @include desktop{
           padding-left: 4.8rem;
@@ -68,8 +72,7 @@
       @include tablet {
         font-size: 1.75rem;
         font-weight: bold;
-        margin-left: 2rem;
-        margin-top: 3rem;
+        margin: 2.5rem 0 1rem 3rem
       }
       @include desktop{
         padding-left: 4.8rem;
@@ -80,7 +83,7 @@
       @include tablet {
         display: flex;
         justify-content: space-around;
-        margin: 0 2rem;
+        margin: 0 3rem;
         text-align: left;
       }
       @include desktop{
