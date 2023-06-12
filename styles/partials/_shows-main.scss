@@ -1,8 +1,20 @@
+@use "./breakpoints" as *;
 @use "./variables.scss" as *;
 
 .main{
     @include regular-font;
     line-height: 1.125rem;
+
+    &__div{
+        display: flex;
+        justify-content: left;
+
+        &-p{
+            margin: 0 7rem 1rem 1rem;
+            color: #AFAFAF;
+            @include demi-font;
+        }
+    }
 
     &__h2{
         @include demi-font;
@@ -15,9 +27,17 @@
         list-style-type: none;
         display: flex;
         flex-direction: column;
+        @include tablet{
+            
+        }
 
         &-item{
             border-bottom: 1px solid #E1E1E1;
+            @include tablet{
+                display: flex;
+                align-content:;
+                justify-content: space-evenly;
+            }
 
             &-visible {
                 background-color: #E1E1E1;
@@ -33,6 +53,9 @@
             }
             &-text{
                 padding-top: 0.5rem;
+                @include tablet{
+                    margin-right: 3rem;
+                }
             }
             &-button{
                 background-color: #323232;
@@ -43,6 +66,11 @@
                 margin: 1rem 0;
                 line-height: 1.25rem;
                 @include demi-font;
+                @include tablet{
+                    width: 25%;
+                    // position: relative;
+                    // left: 33rem;
+                }
             }
         }
     }

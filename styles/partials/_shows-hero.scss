@@ -8,16 +8,40 @@
     @include mobile-padding;
     padding-bottom: 1rem;
     background-image: url("../../assets/Images/hero-shows.jpg");
-    background-size: contain;
+    background-size: cover;
+    @include tablet{
+        justify-content: left;
+    }
 
     &__div{
+        display: flex;
+        flex-direction: column;
         width: 80%;
         color: #FFFFFF;
         @include demi-font;
         line-height: 2rem;
+        @include tablet{
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+            line-height: 4rem;
+            padding-right: 4rem
+        }
+
+        &-song{
+            @include tablet{
+                width: 50%;
+                margin-left: 1.5rem;
+            }
+        }
 
         &-p{
             @include regular-font;
+        }
+        &-h1{
+            @include tablet{
+                font-size: 3.5rem;
+                padding: 0 0 2.25rem 0;
+            }
         }
     }
 
