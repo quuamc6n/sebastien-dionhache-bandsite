@@ -112,7 +112,11 @@ function createListItem(array) {
         // Only had to comment out this portion of code which helped with Tablet layout but not mobile.
         // Was not able to complete this portion - got approval from Joe to re-submit
         // As I sent in the wrong file with this portion not commented out. Sorry about that!
-        // Please let me know if you have any questions
+        // Please let me know if you have any questions.
+
+        // I now realize it is a problem with my code itself as it depends on what the
+        // Screen size is when refreshing. Will need to refactor this a bunch of course.
+        // Thank you!
 
         // const listEleTextTwo = document.createElement("p");
         // listEleTextTwo.className = "main__list-item-text";
