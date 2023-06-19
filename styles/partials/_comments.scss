@@ -12,11 +12,11 @@
     }
 
     &__h2{
+        @include demi-font;
         @include mobile-padding;
         @include tablet{
             margin: 3rem 0 1rem 1rem;
             font-size: 3rem;
-            @include demi-font;
         }
     }
 

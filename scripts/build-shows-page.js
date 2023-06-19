@@ -12,38 +12,6 @@ const list = document.querySelector(".main__list");
 const container = document.createElement("div");
 container.className = "main__div";
 
-// let myObj = [
-//   {
-//     DATE: "Mon Sept 06 2021",
-//     VENUE: "Ronald Lane",
-//     LOCATION: "San Francisco, CA",
-//   },
-//   {
-//     DATE: "Tue Sept 21 2021",
-//     VENUE: "Pier 3 east",
-//     LOCATION: "San Francisco, CA",
-//   },
-//   {
-//     DATE: "Fri Oct 15 2021",
-//     VENUE: "View Lounge",
-//     LOCATION: "San Francisco, CA",
-//   },
-//   {
-//     DATE: "Sat Nov 06 2021",
-//     VENUE: "Hyatt Agency",
-//     LOCATION: "San Francisco, CA",
-//   },
-//   {
-//     DATE: "Fri Nov 26 2021",
-//     VENUE: "Moscow Center",
-//     LOCATION: "San Francisco, CA",
-//   },
-//   {
-//     DATE: "Wed Dec 15 2021",
-//     VENUE: "Press Club",
-//     LOCATION: "San Francisco, CA",
-//   },
-// ];
 
 function createListItem(array) {
   if (window.innerWidth > 767) {
@@ -119,24 +87,6 @@ function createListItem(array) {
 
         list.appendChild(listEle);
         listEle.appendChild(createButton);
-
-        // Only had to comment out this portion of code which helped with Tablet layout but not mobile.
-        // Was not able to complete this portion - got approval from Joe to re-submit
-        // As I sent in the wrong file with this portion not commented out. Sorry about that!
-        // Please let me know if you have any questions.
-
-        // I now realize it is a problem with my code itself as it depends on what the
-        // Screen size is when refreshing. Will need to refactor this a bunch of course.
-        // Thank you!
-
-        // const listEleTextTwo = document.createElement("p");
-        // listEleTextTwo.className = "main__list-item-text";
-        // let valuesArray = Object.values(array[i]);
-        // let textNodeTwo = document.createTextNode(valuesArray[x]);
-        // listEleTextTwo.appendChild(textNodeTwo);
-
-        // listEle.appendChild(createButton);
-        // list.appendChild(listEle);
       }
     }
   }
