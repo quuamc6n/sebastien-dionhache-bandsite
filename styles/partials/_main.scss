@@ -6,6 +6,7 @@
   &__h2 {
       margin-bottom: 0;
       padding: 1rem 0 0 0;
+      @include colorBandSiteBlack;
       @include demi-font;
       @include tablet {
         margin-bottom: 1rem;

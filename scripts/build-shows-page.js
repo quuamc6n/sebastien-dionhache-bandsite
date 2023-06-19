@@ -1,39 +1,49 @@
+function getShowData() {
+  axios.get(
+    "https:project-1-api.herokuapp.com/showdates?api_key=%3C98da4bee-8f08-4234-9431-3f569c0a8a67%3E"
+  ).then ((response) => {
+    createListItem(response.data);
+  })
+}
+getShowData();
+
+
 const list = document.querySelector(".main__list");
 const container = document.createElement("div");
 container.className = "main__div";
 
-let myObj = [
-  {
-    DATE: "Mon Sept 06 2021",
-    VENUE: "Ronald Lane",
-    LOCATION: "San Francisco, CA",
-  },
-  {
-    DATE: "Tue Sept 21 2021",
-    VENUE: "Pier 3 east",
-    LOCATION: "San Francisco, CA",
-  },
-  {
-    DATE: "Fri Oct 15 2021",
-    VENUE: "View Lounge",
-    LOCATION: "San Francisco, CA",
-  },
-  {
-    DATE: "Sat Nov 06 2021",
-    VENUE: "Hyatt Agency",
-    LOCATION: "San Francisco, CA",
-  },
-  {
-    DATE: "Fri Nov 26 2021",
-    VENUE: "Moscow Center",
-    LOCATION: "San Francisco, CA",
-  },
-  {
-    DATE: "Wed Dec 15 2021",
-    VENUE: "Press Club",
-    LOCATION: "San Francisco, CA",
-  },
-];
+// let myObj = [
+//   {
+//     DATE: "Mon Sept 06 2021",
+//     VENUE: "Ronald Lane",
+//     LOCATION: "San Francisco, CA",
+//   },
+//   {
+//     DATE: "Tue Sept 21 2021",
+//     VENUE: "Pier 3 east",
+//     LOCATION: "San Francisco, CA",
+//   },
+//   {
+//     DATE: "Fri Oct 15 2021",
+//     VENUE: "View Lounge",
+//     LOCATION: "San Francisco, CA",
+//   },
+//   {
+//     DATE: "Sat Nov 06 2021",
+//     VENUE: "Hyatt Agency",
+//     LOCATION: "San Francisco, CA",
+//   },
+//   {
+//     DATE: "Fri Nov 26 2021",
+//     VENUE: "Moscow Center",
+//     LOCATION: "San Francisco, CA",
+//   },
+//   {
+//     DATE: "Wed Dec 15 2021",
+//     VENUE: "Press Club",
+//     LOCATION: "San Francisco, CA",
+//   },
+// ];
 
 function createListItem(array) {
   if (window.innerWidth > 767) {
@@ -49,17 +59,17 @@ function createListItem(array) {
 
       const dateNode = document.createElement("p");
       dateNode.className = "main__list-item-text";
-      dateTextNode = document.createTextNode(array[y].DATE);
+      dateTextNode = document.createTextNode(array[y].date);
       dateNode.appendChild(dateTextNode);
 
       const venueNode = document.createElement("p");
       venueNode.className = "main__list-item-text";
-      venueTextNode = document.createTextNode(array[y].VENUE);
+      venueTextNode = document.createTextNode(array[y].place);
       venueNode.appendChild(venueTextNode);
 
       const locNode = document.createElement("p");
       locNode.className = "main__list-item-text";
-      locTextNode = document.createTextNode(array[y].LOCATION);
+      locTextNode = document.createTextNode(array[y].location);
       locNode.appendChild(locTextNode);
 
       const createButton = document.createElement("button");
@@ -89,8 +99,9 @@ function createListItem(array) {
     const creatButtonText = document.createTextNode("BUY TICKETS");
     createButton.appendChild(creatButtonText);
 
+    //Changed x = 1 to skip "response.data.id" and only show date, place, and location
     if (window.innerWidth < 768) {
-      for (let x = 0; x < Object.keys(array[i]).length; x++) {
+      for (let x = 1; x < Object.keys(array[i]).length; x++) {
         const listEleText = document.createElement("p");
         listEleText.className = "main__list-item-title";
         let keysArray = Object.keys(array[i]);
@@ -130,7 +141,7 @@ function createListItem(array) {
     }
   }
 }
-createListItem(myObj);
+// createListItem(myObj);
 
 //Add class to set focus
 function makeVisible(element) {

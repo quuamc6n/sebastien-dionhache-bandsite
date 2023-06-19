@@ -9,6 +9,7 @@
     &__h2{
         padding-bottom: 0;
         @include demi-font;
+        @include colorBandSiteBlack;
         padding-top: 1rem;
         margin-left: 1rem;
         @include tablet{

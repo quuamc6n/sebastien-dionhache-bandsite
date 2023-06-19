@@ -10,6 +10,7 @@
         position: absolute;
         z-index: 1;
         margin-left: 1rem;
+        @include colorWhite;
         @include demi-font;
         color: white;
         @include tablet{

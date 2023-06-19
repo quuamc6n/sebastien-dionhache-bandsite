@@ -34,28 +34,10 @@ Need to ask how to store in global variable.
   padding: 0 2.25rem
 }
 
-//Need to figure out why/how this was not working/make it work
+@mixin colorWhite {
+  color: #FFFFFF;
+};
 
-// @mixin nav-underline-mobile {
-//   text-decoration: underline solid white;
-//   text-decoration-thickness: 2px;
-//   text-underline-offset: 1.75rem;
-//   font-weight: bold;
-//   color: white;
-// }
-
-// @mixin nav-underline-tablet {
-//   text-decoration: underline solid white;
-//   text-decoration-thickness: 2px;
-//   text-underline-offset: 4.05rem;
-//   font-weight: bold;
-//   color: white;
-// }
-
-// @mixin bandsite-underline {
-//   text-decoration: underline solid white;
-//   text-decoration-thickness: 2px;
-//   text-underline-offset: 3.8rem;
-//   font-weight: bold;
-//   color: white;
-// }
+@mixin colorBandSiteBlack {
+  color: #323232;
+}

@@ -8,7 +8,8 @@
   width: 100vw;
   height: 15vh;
   background-color: #323232;
-  color: #e1e1e1;
+  @include regular-font;
+  @include colorWhite;
   @include tablet {
     flex-direction: row;
     justify-content: left;
@@ -38,23 +39,17 @@
       &-link {
         text-decoration: none;
         color: #e1e1e1;
-
-        //could not get underline to work properly. Holding off for more time.
-        
-        // &-bio {
-        //   text-decoration: underline solid white;
-        //   text-decoration-thickness: 2px;
-        //   text-underline-offset: 2rem;
-        //   font-weight: bold;
-        //   color: white;
-        // }
         
       }
       &-link:hover {
         text-decoration: underline solid white;
         text-decoration-thickness: 2px;
         text-underline-offset: 2rem;
-        color: white;
+        @include colorWhite;
+      }
+
+      &-link:active {
+        @include colorWhite;
       }
     }
   }
