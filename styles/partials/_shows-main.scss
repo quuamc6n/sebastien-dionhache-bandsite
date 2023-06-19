@@ -57,7 +57,7 @@
                 }
             }
             &-button{
-                background-color: #323232;
+                @include bgColorBandSiteBlack;
                 @include colorWhite;
                 width: 100%;
                 border-radius: 4px;
@@ -67,8 +67,6 @@
                 @include demi-font;
                 @include tablet{
                     width: 25%;
-                    // position: relative;
-                    // left: 33rem;
                 }
             }
         }

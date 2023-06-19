@@ -65,7 +65,7 @@
         height: 40px;
         width: 100%;
         border-radius: 4px;
-        background-color: #323232;
+        @include bgColorBandSiteBlack;
         @include colorWhite;
         @include tablet{
             width: 30%;

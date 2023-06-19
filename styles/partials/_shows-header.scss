@@ -3,7 +3,7 @@
 
 .header {
     display: flex;
-    background-color: #323232;
+    @include bgColorBandSiteBlack;
     flex-direction: column;
     @include regular-font;
     color: white;

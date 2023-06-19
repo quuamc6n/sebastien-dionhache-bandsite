@@ -2,7 +2,7 @@
 @use "./variables.scss" as *;
 
 .footer {
-  background-color: #323232;
+  @include bgColorBandSiteBlack;
   @include colorWhite;
   padding-left: 1rem;
   @include regular-font;
