@@ -6,8 +6,8 @@
     background-color: #323232;
     flex-direction: column;
     @include regular-font;
-    color: white;
-
+    @include colorWhite;
+    
     @include tablet {
         flex-direction: row;
         justify-content: left;
@@ -66,11 +66,11 @@
                     color: #e1e1e1;
 
                     &:hover {
-                        color: #FFFFFF;
+                        @include colorWhite;
                     }
 
                     &:active {
-                        color: #FFFFFF;
+                        @include colorWhite;
                         font-weight: bold;
                     }
                 }

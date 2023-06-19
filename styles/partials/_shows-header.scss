@@ -61,10 +61,10 @@
                     color: #e1e1e1;
 
                     &:hover{
-                        color: #FFFFFF;
+                        @include colorWhite;
                     }
                     &:active{
-                        color: #FFFFFF;
+                        @include colorWhite;
                         font-weight: bold;
                     }
                 }
