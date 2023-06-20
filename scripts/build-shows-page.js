@@ -9,47 +9,36 @@ getShowData();
 
 
 const list = document.querySelector(".main__list");
-const container = document.createElement("div");
-container.className = "main__div";
+const mainDiv = document.querySelector(".main__div")
 
 
 function createListItem(array) {
+  
   if (window.innerWidth > 767) {
     tabletLayout(Object.keys(array[0]));
 
+    let date = [];
+    array.forEach((ele) => date.push(convertDate(ele.date)));
+    list.appendChild(tabletShowsLayout(date));
+
+    let place = [];
+    array.forEach((ele) => place.push(ele.place));
+    list.appendChild(tabletShowsLayout(place));
+    
+    let location = [];
+    array.forEach((ele) => location.push(ele.location));
+    list.appendChild(tabletShowsLayout(location));
+
+    const buttonList = document.createElement("li");
+    buttonList.className = "main__list-item-CTA";
     for (let y = 0; y < array.length; y++) {
-      const listEle = document.createElement("li");
-      listEle.className = "main__list-item";
-
-      listEle.addEventListener("click", () => {
-        visibileCheck(listEle);
-      });
-
-      const dateNode = document.createElement("p");
-      dateNode.className = "main__list-item-text";
-      dateTextNode = document.createTextNode(array[y].date);
-      dateNode.appendChild(dateTextNode);
-
-      const venueNode = document.createElement("p");
-      venueNode.className = "main__list-item-text";
-      venueTextNode = document.createTextNode(array[y].place);
-      venueNode.appendChild(venueTextNode);
-
-      const locNode = document.createElement("p");
-      locNode.className = "main__list-item-text";
-      locTextNode = document.createTextNode(array[y].location);
-      locNode.appendChild(locTextNode);
-
       const createButton = document.createElement("button");
       createButton.className = "main__list-item-button";
       const creatButtonText = document.createTextNode("BUY TICKETS");
-      createButton.appendChild(creatButtonText);
 
-      listEle.appendChild(dateNode);
-      listEle.appendChild(venueNode);
-      listEle.appendChild(locNode);
-      listEle.appendChild(createButton);
-      list.appendChild(listEle);
+      createButton.appendChild(creatButtonText);
+      buttonList.appendChild(createButton);
+      list.appendChild(buttonList);
     }
   }
 
@@ -91,7 +80,12 @@ function createListItem(array) {
     }
   }
 }
-// createListItem(myObj);
+
+//Convert date from milliseconds to MM/DD/YYYY
+function convertDate(dateInMilliseconds) {
+  const convertedDate = new Date(parseInt(dateInMilliseconds));
+  return convertedDate.toLocaleDateString('en-US');
+}
 
 //Add class to set focus
 function makeVisible(element) {
@@ -114,12 +108,31 @@ function visibileCheck(element) {
 }
 
 function tabletLayout(obj) {
-  for (let i = 0; i < 3; i++) {
+  for (let i = 1; i < 4; i++) {
     const listEleText = document.createElement("p");
     listEleText.className = "main__div-p";
     let textNode = document.createTextNode(obj[i]);
     listEleText.appendChild(textNode);
-    container.appendChild(listEleText);
+    mainDiv.appendChild(listEleText);
   }
-  list.appendChild(container);
+}
+
+
+function tabletShowsLayout(arr) {
+  const listItem = document.createElement('li');
+  listItem.className = 'main__list-item';
+  
+  for (let i = 0; i < arr.length; i++) {
+    const innerP = document.createElement('p');
+    innerP.className = ('main__list-item-p');
+    const innerText = document.createTextNode(arr[i]);
+    innerP.appendChild(innerText);
+    listItem.appendChild(innerP);
+  }
+  return listItem;
+}
+
+function convertDate(dateInMilliseconds) {
+  const convertedDate = new Date(parseInt(dateInMilliseconds));
+  return convertedDate.toLocaleDateString("en-US");
 }

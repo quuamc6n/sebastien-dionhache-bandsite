@@ -65,7 +65,7 @@ function createCard(array) {
     // create p for date and append into nameDateDiv
     const datePar = document.createElement("p");
     datePar.className = "comments__container-main-text-date";
-    dateText = document.createTextNode(date);
+    dateText = document.createTextNode(convertDate(date));
     datePar.appendChild(dateText);
     nameDateDiv.appendChild(datePar);
 
@@ -125,4 +125,10 @@ function getNewName() {
 function getNewComment() {
   const newComment = document.getElementById("newComment");
   return newComment.value;
+}
+
+//Convert date from milliseconds to MM/DD/YYYY
+function convertDate(dateInMilliseconds) {
+  const convertedDate = new Date(parseInt(dateInMilliseconds));
+  return convertedDate.toLocaleDateString('en-US');
 }

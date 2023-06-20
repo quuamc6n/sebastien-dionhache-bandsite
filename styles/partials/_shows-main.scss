@@ -5,37 +5,49 @@
     @include regular-font;
     line-height: 1.125rem;
 
-    &__div{
-        display: flex;
-        justify-content: left;
-
-        &-p{
-            margin: 0 7rem 1rem 1rem;
-            color: #AFAFAF;
-            @include demi-font;
-        }
-    }
-
     &__h2{
         @include demi-font;
         padding-left: 1rem;
         font-size: 2rem;
         margin-top: 1rem;
+        @include tablet{
+            margin-left: 1rem;
+        }
     }
+    &__div{
+        display: flex;
+        justify-content: left;
+        margin-left: 1rem;
+        @include tablet{
+            justify-content: flex-start
+        }
+
+        &-p{
+            margin: 0 8.5rem 1rem 1rem;
+            color: #AFAFAF;
+            @include demi-font;
+        }
+    }
+
     &__list{
         padding: 1rem;
         list-style-type: none;
         display: flex;
         flex-direction: column;
         @include tablet{
-            
+            flex-direction: row;
+            justify-content: left;
         }
 
         &-item{
             border-bottom: 1px solid #E1E1E1;
             @include tablet{
                 display: flex;
-                justify-content: space-evenly;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: left;
+                margin-left: 1rem;
+                margin-right: 3rem;
             }
 
             &-visible {
@@ -56,6 +68,15 @@
                     margin-right: 3rem;
                 }
             }
+
+            &-CTA{
+                @include tablet{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: self-end;
+                    width: 25%;
+                }
+            }
             &-button{
                 @include bgColorBandSiteBlack;
                 @include colorWhite;
@@ -66,7 +87,7 @@
                 line-height: 1.25rem;
                 @include demi-font;
                 @include tablet{
-                    width: 25%;
+                    width: 100%;
                 }
             }
         }
