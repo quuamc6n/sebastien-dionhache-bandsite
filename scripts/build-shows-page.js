@@ -95,8 +95,7 @@ function makeVisible(element) {
 function makeInvisible(element) {
   element.classList.remove("main__list-item-visible");
 }
-//Checking if element already has class to set focus. If so, keep that <li> selected.
-//If not, add it as new focus and remove any other currently focused <li>.
+
 function visibileCheck(element) {
   const fullList = list.getElementsByClassName("main__list-item");
   for (let i = 0; i < fullList.length; i++) {
