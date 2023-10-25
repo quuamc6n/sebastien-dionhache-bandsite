@@ -1,12 +1,14 @@
-function getShowData() {
-  axios.get(
-    "https:project-1-api.herokuapp.com/showdates?api_key=%3C98da4bee-8f08-4234-9431-3f569c0a8a67%3E"
-  ).then ((response) => {
+async function getShowData() {
+  try {
+    const response = await axios.get(
+      `https://project-1-api.herokuapp.com/showdates?api_key=98da4bee-8f08-4234-9431-3f569c0a8a67`
+    );
     createListItem(response.data);
-  })
+  } catch (error) {
+    console.error("Error getting show data:", error);
+  }
 }
 getShowData();
-
 
 const list = document.querySelector(".main__list");
 const mainDiv = document.querySelector(".main__div")

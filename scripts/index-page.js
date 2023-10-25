@@ -1,23 +1,33 @@
-function initializeData() {
-  axios
-    .get(
-      "https:project-1-api.herokuapp.com/comments?api_key=%3C98da4bee-8f08-4234-9431-3f569c0a8a67%3E"
-    )
-    .then((response) => {
-      createCard(response.data.reverse());
-    });
+async function initializeData() {
+  try {
+    const response = await axios.get(
+      `https://project-1-api.herokuapp.com/comments?api_key=98da4bee-8f08-4234-9431-3f569c0a8a67`
+    );
+    createCard(response.data.reverse());
+  } catch (error) {
+    console.error("Error initializing data:", error);
+  }
 }
+
+async function getData() {
+  try {
+    const response = await axios.get(
+      `https//:project-1-api.herokuapp.com/comments?api_key=98da4bee-8f08-4234-9431-3f569c0a8a67`
+    );
+    createCard([response.data[response.data.length - 1]]);
+  } catch (error) {
+    console.error("Error getting data:", error);
+  }
+}
+
+// Call the functions
 initializeData();
 
-function getData() {
-  axios
-    .get(
-      "https:project-1-api.herokuapp.com/comments?api_key=%3C98da4bee-8f08-4234-9431-3f569c0a8a67%3E"
-    )
-    .then((response) => {
-      createCard([response.data[response.data.length-1]])
-    });
+// Define createCard function (not shown in the provided code)
+function createCard(data) {
+  // Implement the logic for creating cards with the received data.
 }
+
 
 const mainContainer = document.querySelector(".comments__container");
 const formEvent = document.querySelector(".form");
@@ -78,7 +88,6 @@ function createCard(array) {
   }
 }
 
-
 const formAvatar = document.querySelector(".form__img");
 function createFormAvatar(img) {
   const ele = document.createElement("img");
@@ -94,14 +103,14 @@ function displayComment() {
     event.preventDefault();
     axios
       .post(
-        "https:project-1-api.herokuapp.com/comments?api_key=%3C98da4bee-8f08-4234-9431-3f569c0a8a67%3E",
+        `https://project-1-api.herokuapp.com/comments?api_key=98da4bee-8f08-4234-9431-3f569c0a8a67`,
         {
           name: getNewName(),
-          comment: getNewComment()
+          comment: getNewComment(),
         }
       )
       .then(() => getData());
-      formEvent.reset();
+    formEvent.reset();
   });
 }
 displayComment();
@@ -130,5 +139,5 @@ function getNewComment() {
 //Convert date from milliseconds to MM/DD/YYYY
 function convertDate(dateInMilliseconds) {
   const convertedDate = new Date(parseInt(dateInMilliseconds));
-  return convertedDate.toLocaleDateString('en-US');
+  return convertedDate.toLocaleDateString("en-US");
 }
